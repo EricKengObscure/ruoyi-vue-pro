@@ -7,6 +7,9 @@
         <artifactId>yudao</artifactId>
         <version>${revision}</version>
     </parent>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>yudao-module-system-api</module>

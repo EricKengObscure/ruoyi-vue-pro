@@ -5,6 +5,7 @@ import cn.iocoder.yudao.module.system.framework.sms.core.client.dto.SmsReceiveRe
 import cn.iocoder.yudao.module.system.framework.sms.core.client.dto.SmsSendRespDTO;
 import cn.iocoder.yudao.module.system.framework.sms.core.client.dto.SmsTemplateRespDTO;
 import cn.iocoder.yudao.module.system.framework.sms.core.property.SmsChannelProperties;
+import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -47,7 +48,7 @@ public class SmsClientTests {
         String mobile = "15601691323";
         String apiTemplateId = "SMS_207945135";
         // 调用
-        SmsSendRespDTO sendRespDTO = client.sendSms(sendLogId, mobile, apiTemplateId, List.of(new KeyValue<>("code", "1024")));
+        SmsSendRespDTO sendRespDTO = client.sendSms(sendLogId, mobile, apiTemplateId, Lists.newArrayList(new KeyValue<>("code", "1024")));
         // 打印结果
         System.out.println(sendRespDTO);
     }
@@ -96,7 +97,7 @@ public class SmsClientTests {
         String mobile = "15601691323";
         String apiTemplateId = "2136358";
         // 调用
-        SmsSendRespDTO sendRespDTO = client.sendSms(sendLogId, mobile, apiTemplateId, List.of(new KeyValue<>("code", "1024")));
+        SmsSendRespDTO sendRespDTO = client.sendSms(sendLogId, mobile, apiTemplateId, Lists.newArrayList(new KeyValue<>("code", "1024")));
         // 打印结果
         System.out.println(sendRespDTO);
     }
@@ -131,7 +132,7 @@ public class SmsClientTests {
         Long sendLogId = System.currentTimeMillis();
         String mobile = "15601691323";
         String apiTemplateId = "xx test01";
-        List<KeyValue<String, Object>> templateParams = List.of(new KeyValue<>("code", "1024"));
+        List<KeyValue<String, Object>> templateParams = Lists.newArrayList(new KeyValue<>("code", "1024"));
         // 调用
         SmsSendRespDTO smsSendRespDTO = client.sendSms(sendLogId, mobile, apiTemplateId, templateParams);
         // 打印结果

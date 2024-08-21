@@ -17,6 +17,10 @@
         例如说：用户、部门、权限、数据字典等等
     </description>
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>cn.iocoder.boot</groupId>
